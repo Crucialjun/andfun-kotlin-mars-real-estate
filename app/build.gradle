@@ -22,14 +22,14 @@ apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs"
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     dataBinding {
         enabled = true
     }
     defaultConfig {
         applicationId "com.example.android.marsrealestate"
-        minSdkVersion 19
-        targetSdkVersion 28
+        minSdkVersion 24
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -42,6 +42,15 @@ android {
     }
     androidExtensions {
         experimental = true
+    }
+
+    compileOptions{
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions{
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
 

@@ -57,7 +57,7 @@ class OverviewViewModel : ViewModel() {
      */
     private fun getMarsRealEstateProperties() {
         coroutineScope.launch {
-            var getPropertiesDeffered = MarsApi.retrofitService.getProperties()
+            var getPropertiesDeffered = MarsApi.retrofitService.getPropertiesAsync()
             try {
                 var listResult = getPropertiesDeffered.await()
                 if (listResult.isNotEmpty()) {
