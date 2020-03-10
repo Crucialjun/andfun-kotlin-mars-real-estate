@@ -24,11 +24,11 @@
     <data>
 
         <variable
-            name="viewModel"
-            type="com.example.android.marsrealestate.overview.OverviewViewModel" />
+            name="property"
+            type="com.example.android.marsrealestate.network.MarsProperty" />
     </data>
     <ImageView
-        imageUrl="@{viewModel.property.imgSrcUrl"
+        imageUrl="@{property.imgSrcUrl"
         android:id="@+id/mars_image"
         android:layout_width="match_parent"
         android:layout_height="170dp"
